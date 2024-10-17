@@ -36,7 +36,7 @@ pipeline {
                    git commit -m "Updated Deployment Manifest"
                 """
                 withCredentials([gitUsernamePassword(credentialsId: 'GitHub', gitToolName: 'Default')]) {
-                  sh "git remote set-url origin https://shivanaini:${GitHub}@github.com/shivanaini/gitops-register-app.git
+                  sh "git remote set-url origin https://shivanaini:${GitHub}@github.com/shivanaini/gitops-register-app.git"
 
                     sh "git push origin main"
                 }
